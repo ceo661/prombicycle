@@ -1055,7 +1055,7 @@ function switchTab(type) {
 /* ── Supabase 설정 ── */
 const SUPABASE_URL = 'https://cbqgfplibctiwmqtkksx.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicWdmcGxpYmN0aXdtcXRra3N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA4OTYyNzAsImV4cCI6MjA5NjQ3MjI3MH0.fRzDPqV-sjhZXrtdQdEBKhaPStFOS7jg_EzvARUUcQU';
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 /* ── Form handlers ── */
 async function submitReserve() {
@@ -1075,7 +1075,7 @@ async function submitReserve() {
   btn.disabled = true;
   btn.textContent = isEn ? 'Sending...' : '전송 중...';
 
-  const { error } = await supabase.from('consultations').insert([{
+  const { error } = await db.from('consultations').insert([{
     type: 'rental',
     name, phone, rental_date, bike_type, bike_qty
   }]);
@@ -1127,7 +1127,7 @@ async function submitInquiry(type) {
   btn.disabled = true;
   btn.textContent = isEn ? 'Sending...' : '전송 중...';
 
-  const { error } = await supabase.from('consultations').insert([data]);
+  const { error } = await db.from('consultations').insert([data]);
 
   btn.disabled = false;
   btn.textContent = isEn ? 'Send Inquiry' : '문의 보내기';
