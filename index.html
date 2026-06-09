@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>약속의 자전거 | Prom Bicycle</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -293,7 +294,7 @@
 
       <!-- Image -->
       <div class="relative fade-up" style="transition-delay:.1s">
-        <img src="./photos/bikes/standard.jpg" alt="약속의 자전거 매장"
+        <img src="./photos/store_jpeg.jpeg" alt="약속의 자전거 매장"
              class="w-full aspect-square object-cover rounded-sm shadow-lg"
              onerror="this.src='https://placehold.co/600x600/F7F4EF/2E7D52?text=약속의+자전거'">
         <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1.5 rounded-sm ko">서울 은평구</div>
@@ -551,14 +552,14 @@
       <h2 class="font-display text-3xl md:text-4xl font-bold text-dark en hidden-lang">Equipment optimized for the Grand Tour</h2>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Standard -->
+      <!-- Smart -->
       <div class="bike-card bg-white rounded-sm shadow-sm overflow-hidden fade-up">
-        <img src="./photos/bikes/standard.jpg" alt="스탠다드 자전거"
+        <img src="./photos/bikes/smart.jpg" alt="스마트 자전거"
              class="w-full aspect-[4/3] object-cover"
-             onerror="this.src='https://placehold.co/400x300/E8F5EE/2E7D52?text=Standard'">
+             onerror="this.src='https://placehold.co/400x300/E8F5EE/2E7D52?text=Smart'">
         <div class="p-6">
-          <h3 class="font-display text-xl font-bold text-dark ko">스탠다드</h3>
-          <h3 class="font-display text-xl font-bold text-dark en hidden-lang">Standard</h3>
+          <h3 class="font-display text-xl font-bold text-dark ko">스마트 자전거</h3>
+          <h3 class="font-display text-xl font-bold text-dark en hidden-lang">Smart Bike</h3>
           <p class="text-2xl font-black text-brand mt-1">₩30,000 <span class="text-sm font-normal text-muted ko">/ 1일</span><span class="text-sm font-normal text-muted en hidden-lang">/ day</span></p>
           <ul class="mt-4 space-y-1.5 text-sm text-dark/60 ko">
             <li>• 입문자 추천</li><li>• 21단 변속기</li><li>• 앞뒤 브레이크</li>
@@ -571,18 +572,18 @@
         </div>
       </div>
 
-      <!-- Geared -->
+      <!-- Hybrid -->
       <div class="bike-card bg-white rounded-sm shadow-sm overflow-hidden fade-up" style="transition-delay:.1s">
         <div class="relative">
-          <img src="./photos/bikes/geared.jpg" alt="기어드 자전거"
+          <img src="./photos/bikes/hybrid.jpg" alt="하이브리드 자전거"
                class="w-full aspect-[4/3] object-cover"
-               onerror="this.src='https://placehold.co/400x300/E8F5EE/2E7D52?text=Geared'">
+               onerror="this.src='https://placehold.co/400x300/E8F5EE/2E7D52?text=Hybrid'">
           <div class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded-sm ko">인기</div>
           <div class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded-sm en hidden-lang">Popular</div>
         </div>
         <div class="p-6">
-          <h3 class="font-display text-xl font-bold text-dark ko">기어드</h3>
-          <h3 class="font-display text-xl font-bold text-dark en hidden-lang">Geared</h3>
+          <h3 class="font-display text-xl font-bold text-dark ko">하이브리드</h3>
+          <h3 class="font-display text-xl font-bold text-dark en hidden-lang">Hybrid</h3>
           <p class="text-2xl font-black text-brand mt-1">₩40,000 <span class="text-sm font-normal text-muted ko">/ 1일</span><span class="text-sm font-normal text-muted en hidden-lang">/ day</span></p>
           <ul class="mt-4 space-y-1.5 text-sm text-dark/60 ko">
             <li>• 장거리 국토종주 최적화</li><li>• 27단 변속기</li><li>• 경량 알루미늄 프레임</li>
@@ -678,12 +679,12 @@
         <span>View on Naver Map</span>
       </a>
     </div>
-    <div class="fade-up bg-white rounded-sm h-64 flex items-center justify-center shadow-sm" style="transition-delay:.1s">
-      <div class="text-center text-dark/40">
-        <div class="text-5xl mb-3">🗺️</div>
-        <p class="text-sm ko">서울시 은평구 연서로 323</p>
-        <p class="text-sm en hidden-lang">323 Yeonseo-ro, Eunpyeong-gu</p>
-      </div>
+    <div class="fade-up rounded-sm overflow-hidden shadow-sm h-64" style="transition-delay:.1s">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.234567890123!2d126.9189!3d37.6178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9885a1234567%3A0x1234567890abcdef!2z7ISc7Jq47Yq567OE7IucIOydtOumrOq1rCDsl63ruYzroZwgMzIz!5e0!3m2!1sko!2skr!4v1234567890"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
@@ -1051,12 +1052,93 @@ function switchTab(type) {
   });
 }
 
+/* ── Supabase 설정 ── */
+const SUPABASE_URL = 'https://cbqgfplibctiwmqtkksx.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicWdmcGxpYmN0aXdtcXRra3N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA4OTYyNzAsImV4cCI6MjA5NjQ3MjI3MH0.fRzDPqV-sjhZXrtdQdEBKhaPStFOS7jg_EzvARUUcQU';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 /* ── Form handlers ── */
-function submitReserve() {
-  alert(isEn ? 'Reservation request received! We will contact you soon.' : '예약 신청이 접수되었습니다! 곧 연락드리겠습니다.');
+async function submitReserve() {
+  const inputs = document.querySelectorAll('#reserve-form input, #reserve-form select');
+  const name = inputs[0].value.trim();
+  const phone = inputs[1].value.trim();
+  const rental_date = inputs[2].value;
+  const bike_type = inputs[3].value;
+  const bike_qty = parseInt(inputs[4].value) || 1;
+
+  if (!name || !phone) {
+    alert(isEn ? 'Please enter your name and contact.' : '이름과 연락처를 입력해 주세요.');
+    return;
+  }
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = isEn ? 'Sending...' : '전송 중...';
+
+  const { error } = await supabase.from('consultations').insert([{
+    type: 'rental',
+    name, phone, rental_date, bike_type, bike_qty
+  }]);
+
+  btn.disabled = false;
+  btn.textContent = isEn ? 'Submit Reservation' : '예약 신청';
+
+  if (error) {
+    alert(isEn ? 'Error occurred. Please try again.' : '오류가 발생했습니다. 다시 시도해 주세요.');
+    console.error(error);
+  } else {
+    alert(isEn ? '✅ Reservation received! We will contact you soon.' : '✅ 예약 신청이 접수되었습니다! 곧 연락드리겠습니다.');
+    document.querySelectorAll('#reserve-form input').forEach(el => el.value = '');
+  }
 }
-function submitInquiry(type) {
-  alert(isEn ? 'Inquiry received! We will get back to you shortly.' : '문의가 접수되었습니다! 빠른 시일 내에 답변드리겠습니다.');
+
+async function submitInquiry(type) {
+  const panel = document.getElementById(`panel-${type}`);
+  const inputs = panel.querySelectorAll('input, select, textarea');
+
+  let data = { type };
+
+  if (type === 'rental') {
+    data.name = inputs[0].value.trim();
+    data.phone = inputs[1].value.trim();
+    data.rental_date = inputs[2].value;
+    data.bike_type = inputs[3].value;
+    data.bike_qty = parseInt(inputs[4].value) || 1;
+    data.message = inputs[5].value.trim();
+    if (!data.name || !data.phone) {
+      alert(isEn ? 'Please enter your name and contact.' : '이름과 연락처를 입력해 주세요.');
+      return;
+    }
+  } else {
+    data.name = inputs[0].value.trim();
+    data.phone = inputs[1].value.trim();
+    data.edu_course = inputs[2].value;
+    data.edu_date = inputs[3].value;
+    data.edu_participants = parseInt(inputs[4].value) || 1;
+    data.edu_level = inputs[5].value;
+    data.message = inputs[6].value.trim();
+    if (!data.name || !data.phone) {
+      alert(isEn ? 'Please enter your name and contact.' : '이름과 연락처를 입력해 주세요.');
+      return;
+    }
+  }
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = isEn ? 'Sending...' : '전송 중...';
+
+  const { error } = await supabase.from('consultations').insert([data]);
+
+  btn.disabled = false;
+  btn.textContent = isEn ? 'Send Inquiry' : '문의 보내기';
+
+  if (error) {
+    alert(isEn ? 'Error occurred. Please try again.' : '오류가 발생했습니다. 다시 시도해 주세요.');
+    console.error(error);
+  } else {
+    alert(isEn ? '✅ Inquiry received! We will get back to you shortly.' : '✅ 문의가 접수되었습니다! 빠른 시일 내에 답변드리겠습니다.');
+    panel.querySelectorAll('input, textarea').forEach(el => el.value = '');
+  }
 }
 
 /* ── Scroll effects ── */
